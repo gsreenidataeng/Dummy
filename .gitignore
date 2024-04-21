@@ -1,0 +1,10 @@
+
+# to ignore folders
+/Input_data
+/Output_data
+/.venv
+/__pycache__/
+
+# ignore files
+*.pyc
+
