@@ -1,14 +1,13 @@
 # Import necessary libraries
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import format_number, avg, min
+import filepaths
+
 
 # Create a SparkSession
 spark = SparkSession.builder.master('local[1]') \
     .appName('NBC') \
     .getOrCreate()
-
-output_path = '../Output_data/final_result.csv'
-input_path = "../Input_data/race_lap_time_file.txt"
 
 
 # Define a function to read data from a CSV file into a DataFrame
@@ -31,6 +30,6 @@ def write_data(final_data_df, output_path):
 
 
 if __name__ == "__main__":
-    final_df = read_data(input_path)
+    final_df = read_data(filepaths.input_path)
     result_df = calculate_avg_min_time(final_df)
-    write_data(result_df, output_path)
+    write_data(result_df, filepaths.output_path)

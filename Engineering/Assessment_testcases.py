@@ -2,6 +2,7 @@
 import pytest
 from pyspark.sql import SparkSession
 from Assessment_methods import (calculate_avg_min_time, read_data)
+import filepaths
 
 
 # Fixture to create a SparkSession for testing
@@ -18,8 +19,7 @@ def spark_session():
 # Test function to check the functionality of calculate_avg_min_time
 def test_calculate_avg_min_time(spark_session):
     # Read the test input file
-    input_path = "../Input_data/race_lap_time_file.txt"
-    input_df = read_data(input_path)
+    input_df = read_data(filepaths.input_path)
 
     # Call the function being tested
     result_df = calculate_avg_min_time(input_df)

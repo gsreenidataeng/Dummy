@@ -1,0 +1,10 @@
+# ignore folders
+/.venv
+/Input_data
+/Output_data
+*.gitignore
+/.idea
+/home/*
+/usr/*
+
+

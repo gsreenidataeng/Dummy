@@ -1,0 +1,5 @@
+
+{
+  "input_file_path" : "../Input_data/race_lap_time_file.txt",
+  "output_file_path" : "../Output_data/race_lap_results.txt"
+}
