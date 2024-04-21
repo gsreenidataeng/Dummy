@@ -4,9 +4,11 @@
 /Output_data
 /.venv
 /__pycache__/
-/.idea
+/.idea/*
 
 # ignore files
 *.pyc
+*.xml
+*.iml
 
 
